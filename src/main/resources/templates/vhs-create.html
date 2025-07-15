@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vhscreate.com</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Create VHS</h1>
+
+        <form th:action="@{/vhs/create}" method="post" class="mt-4">
+
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>   
+                <input type="text" id="id" name="id" class="form-control" th:value="${vhs.id}" readonly>
+            </div>
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Titulo</label>
+                <input type="text" id="title" name="title" class="form-control" th:value="${vhs.title}" >
+            </div>
+
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">URL da Imagem</label>
+                <input type="text" id="imageUrl" name="imageUrl" class="form-control" th:value="${vhs.imageUrl}" >
+            </div>
+
+
+            <div class="mb-3">
+                <label for="registrationDate" class="form-label">Data de Registro</label>
+                <input type="date" id="registrationDate" name="registrationDate" class="form-control" th:value="${vhs.registrationDate}" readonly >
+            </div>
+
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">URL da Imagem</label>
+                
+
+                <select name="status" id="">
+
+                    <option value="DISPONIVEL">DISPONIVEL</option>
+                    <option value="INDISPONIVEL">INDISPONIVEL</option>
+                    <option value="EMPRESTADA">EMPRESTADA</option>
+
+                </select>
+
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Criar</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
